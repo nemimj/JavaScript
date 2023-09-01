@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+        background-color: lightblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        display: flex;
+        gap: 2rem;
+      }
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        background-color: lightcoral;
+        border: 0;
+      }
+    </style>
+    <title>Variables</title>
+  </head>
+  <body>
+    <h1>
+      Variables <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+console.log("Hello world");
+
+console.error("this is my error");
+
+console.warn("this is my warning");
+
+// Group
+console.group("Group A");
+console.log("hello");
+console.error("this is my group");
+console.groupEnd();
+
+// Table
+console.table({ name: "nemi", age: 22 });
+
+// Css styles in console
+const style = "padding: 10px; background-color:white; color:grey;";
+console.log("%cHello world", style);
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
