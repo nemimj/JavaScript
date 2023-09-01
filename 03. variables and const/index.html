@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+        background-color: lightblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        display: flex;
+        gap: 2rem;
+      }
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        background-color: lightcoral;
+        border: 0;
+      }
+      kbd {
+        border-radius: 5px;
+        padding: 1rem;
+        background-color: aliceblue;
+      }
+
+      .primitive {
+        background-color: bisque;
+      }
+    </style>
+    <title>variables and constants</title>
+  </head>
+  <body>
+    <h1>
+      variables and constants
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+        // Variables
+        // Let , var , const
+        
+        let firstName = "John";
+        let lastName = "Doe";
+        console.log(firstName, lastName);
+        let age = 30;
+        console.log(age);
+        // Naming Conventions
+        // - Only letters, numbers, underscores and dollar signs
+        // Can't start with a number
+        // Multi-Word Formatting
+        firstName = camelCase;
+        // first_name = underscore
+        // First Name = Pascal Case
+        // firstname = lowercase
+        
+        let score;
+        score = 1;
+        console.log(score);
+        
+        // constants
+        const x = 100;
+        const arr = [1, 2, 3, 4];
+        arr.push(5);
+        console.log(arr);
+        const person = {
+          name: "Brad",
+        };
+        person.name = "John";
+        person.email = "brad@gmail.com";
+        console.log(person);
+        
+        // Declare multiple values at once
+        let a, b, c;
+        const d = 10,
+          e = 20,
+          f = 30;
+        console.log(d);
+        console.log(a);
+        
+        <p class="primitive">
+          Primitive Data Types
+String - Sequence of characters. Must be in quotes or backticks
+Number - Integers as well as floating-point numbers
+Boolean - Logical entity / true or false
+Null - Intentional absence of any object value
+Undefined - A Variable that has not yet been defined / assigned
+Symbol - Built-in object whose constructor returns a unique symbol
+BigInt - Numbers that are greater than the "Number" type can handle
+      </p>
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+        background-color: lightblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        display: flex;
+        gap: 2rem;
+      }
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        background-color: lightcoral;
+        border: 0;
+      }
+      kbd {
+        border-radius: 5px;
+        padding: 1rem;
+        background-color: aliceblue;
+      }
+
+      .primitive {
+        padding: 1rem;
+        background-color: bisque;
+      }
+
+      .non-primitive {
+        padding: 1rem;
+        background-color: lightgreen;
+      }
+    </style>
+    <title>variables and constants</title>
+  </head>
+  <body>
+    <h1>
+      variables and constants
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+        <p class="primitive">
+          Primitive Data Types
+          <br>
+String - Sequence of characters. Must be in quotes or backticks
+<br>
+Number - Integers as well as floating-point numbers
+<br>
+Boolean - Logical entity / true or false
+<br>
+Null - Intentional absence of any object value
+<br>
+Undefined - A Variable that has not yet been defined / assigned
+<br>
+Symbol - Built-in object whose constructor returns a unique symbol
+<br>
+BigInt - Numbers that are greater than the "Number" type can handle
+      </p>
+
+      <p class="non-primitive">
+        Reference Types (Objects)
+        <br>
+Reference types or "objects" are a non-primitive value and when
+assigned to a variable, the variable is given a reference to that value.
+Object literals, arrays and functions are all reference types
+      </p>
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
