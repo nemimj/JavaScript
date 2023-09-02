@@ -12,9 +12,6 @@
         font-family: Arial, Helvetica, sans-serif;
       }
 
-      img {
-        width: 80%;
-      }
       h1 {
         display: flex;
         gap: 2rem;
@@ -26,32 +23,36 @@
         background-color: lightcoral;
         border: 0;
       }
-      kbd {
-        border-radius: 5px;
-        padding: 1rem;
-        background-color: aliceblue;
-      }
 
-      .primitive {
+      .note {
         padding: 1rem;
-        background-color: bisque;
-      }
-
-      .non-primitive {
-        padding: 1rem;
-        background-color: lightgreen;
+        background-color: lightslategrey;
+        color: #fff;
       }
     </style>
-    <title>stack and heap</title>
+    <title>Arthmetic Operators</title>
   </head>
   <body>
     <h1>
-      stack and heap
+      Arthmetic Operators
       <button class="btn">Open console to see the result</button>
     </h1>
     <pre>
       <code>
-  <img src="img.png" alt="">
+        let x;
+        x = 5 + "5"; // output : 55
+        x = 5 + Number("5"); // output : 10
+        x = 5 * "5"; // output : 25
+        x = 5 + null; // output : 5
+        x = Number(null); // output : 0
+        X = Number(true); // output : 1
+        X = Number(false); // output : 0
+        x = 5 + true; // output : 6
+        x = 5 + false; // output : 5
+        x = 5 + undefined; // ouput : Nan
+        console.log(x, typeof x);
+        
+
 </code>
     </pre>
     <script src="index.js"></script>

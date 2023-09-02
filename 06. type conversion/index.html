@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+        background-color: lightblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        display: flex;
+        gap: 2rem;
+      }
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        background-color: lightcoral;
+        border: 0;
+      }
+    </style>
+    <title>Type conversion</title>
+  </head>
+  <body>
+    <h1>
+      Type conversion
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+        let amount = "99.5";
+// Conver string to number
+// amount = parseInt(amount);
+// amount = +amount;
+// amount = Number (amount);
+
+//
+// Conver number to string
+// amount = amount.toString();
+// amount = String (amount);
+
+//
+// Conver string to decimal
+amount = parseFloat(amount);
+
+console.log(amount, typeof amount);
+
+// Convert number to boolean
+// amount = Boolean (amount);
+console.log(Math.sqrt(-1));
+console.log(1 + NaN);
+console.log(undefined + undefined);
+console.log("foo" / 3);
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

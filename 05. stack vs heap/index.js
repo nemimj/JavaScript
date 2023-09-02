@@ -10,5 +10,5 @@ let newName = name;
 newName = "Johnathan";
 let newPerson = person;
 newPerson.name = "Bradley";
-Console.log(name, newName);
+console.log(name, newName);
 console.log(person, newPerson);
