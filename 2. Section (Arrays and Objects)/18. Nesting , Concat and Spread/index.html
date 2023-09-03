@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Nesting concat and spread</title>
+  </head>
+  <body>
+    <h1>
+      Nesting concat and spread
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  let x;
+
+  const fruit = ["apple", "banana", "orange"];
+  const berries = ["strawberry", "blueberry", "rasberry"];
+  
+  fruit.push(berries);
+  
+  x = fruit[3][1];
+  
+  const allFruits = [fruit, berries];
+  
+  fruit.concat(berries); // this will add the berries array to fruit
+  
+  <p class="note">// Spread operator</p>
+  x = [...fruit, ...berries];
+  
+  <p class="note">// Flatten Array</p>
+  x = [1, 2, ...fruit, [342, 2], ...berries];
+  x = x.flat();
+  console.log(x);
+  
+  <p class="note">// Static methods</p>
+  x = Array.isArray("Hello"); // this will checks for array
+  
+  x = Array.from("12345"); // this will convert the string of numbers of , each character array ['1','2'...]
+  
+  const a = 1;
+  const b = 2;
+  const c = 3;
+  x = Array.of(a, b, c); // converts the varaibles to array
+  
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
