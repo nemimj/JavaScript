@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Destructring and Naming</title>
+  </head>
+  <body>
+    <h1>
+      Destructring and Naming
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  const age = 30;
+const person = {
+  firstName,
+  lastName,
+  age,
+};
+
+console.log(person.age);
+
+<p class="note">// destructring</p>
+
+const todo = {
+  id: 1,
+  title: "take out trash",
+  user: {
+    name: "john",
+  },
+};
+
+const {
+  id: todoId, // renaming varaible
+  title,
+  user: { name }, // destructuring
+} = todo;
+
+console.log(todoId);
+
+<p class="note">// Destructring array</p>
+
+const numbers = [23, 46, 33, 50, 100];
+
+const [first, second, ...rest] = numbers;
+
+console.log(first, second, rest);
+
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
