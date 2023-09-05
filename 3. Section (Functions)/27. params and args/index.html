@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Params and args</title>
+  </head>
+  <body>
+    <h1>
+      Params and args
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">// Default Paramter</p>
+
+function registerUser(user = "Bot") {
+  return user + " is registered";
+}
+
+function sum(...numbers) {
+  return numbers;
+}
+
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+<p class="note">// Objects as params</p>
+function loginUser(user) {
+  return `The user ${user.name} with the id of ${user.pass}`;
+}
+
+const user = {
+  name: "nemi",
+  pass: "hello",
+};
+
+console.log(loginUser(user));
+
+<p class="note">// Arrays as params</p>
+
+function random(arr) {
+  const num = Math.floor(Math.random() * arr.length);
+  const item = arr[num];
+  console.log(item);
+}
+
+random([1, 3, 4, 5, 9, 0, 183]);
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

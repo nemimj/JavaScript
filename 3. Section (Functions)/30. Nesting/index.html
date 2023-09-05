@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Nesting</title>
+  </head>
+  <body>
+    <h1>
+      Nesting
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">// parent scope</p>
+  function parent() {
+    let x = 10;
+  
+    <p class="note">// child scope</p>
+    function child() {
+      let y = 20;
+      console.log(x + y);
+    }
+  
+    console.log(y); //* we can access the child function variables in parent function
+  }
+  <p class="note">same for the conditionals also</p>
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

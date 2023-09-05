@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h1>
+      Arrow Function
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+
+  <p class="note">
+    // const user = "neminath";
+    // console.log(user); // this will shows error because user already been created in otherScript.js
+  </p>
+  
+  <p class="note">// We use IIFE to avoid these (Immediately Invoked Function Expression)</p>
+  (function () {
+    const user = "nemianth";
+    console.log(user);
+  })();
+  
+  <p class="note">// passing parameter</p>
+  (function hello(name) {
+    console.log(name);
+  })("Nemi");
+  
+  hello(); // we can't use outside the function
+  
+</code>
+    </pre>
+    <script src="otherScript.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

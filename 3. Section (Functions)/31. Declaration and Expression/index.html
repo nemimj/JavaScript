@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Delcaration and Expression</title>
+  </head>
+  <body>
+    <h1>
+      Delcaration and Expression
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">
+    // function declaration
+    dec(); // this is because of hoisting
+    function dec() {
+      console.log("Hello world");
+    }
+    
+    
+  </p>
+  
+  <p class="note">
+    // exp()
+    const exp = function (value) {
+      console.log("Hello world");
+    };
+    
+    exp(); //! we can't call this before expression
+    
+  </p>
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

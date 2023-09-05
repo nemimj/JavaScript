@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h1>
+      Arrow Function
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">// Arrow function</p>
+const add = (a, b) => {
+  return a + b;
+};
+
+<p class="note">// Implicit return</p>
+const sub = (a, b) => (a = b);
+
+// can leave of when a single single param
+const double = (a) => a * 2;
+
+<p class="note">// Returning an a object</p>
+const obj = () => ({
+  name: "nemi",
+});
+
+console.log(add(10, 15));
+console.log(sub(10, 15));
+console.log(double(10));
+console.log(obj());
+<p class="note">
+  // arrow function in callback function
+</p>
+const arr = [1, 2, 3, 4, 5];
+
+arr.forEach((n) => console.log(n));
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
