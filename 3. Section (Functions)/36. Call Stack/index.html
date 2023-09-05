@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Call Stack</title>
+  </head>
+  <body>
+    <h1>
+      Call Stack
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">Call Stack</p>
+  <img src="img/1.png" alt="">
+
+  <p class="note">First Code</p>
+  function first() {
+    console.log("first...");
+  }
+  
+  function second() {
+    console.log("second...");
+  }
+  
+  function third() {
+    console.log("third...");
+  }
+  
+  first();
+  second();
+  third();
+  
+  <img src="img/2.png" alt="">
+
+  <p class="note">Second Code</p>
+  
+function first() {
+  console.log("first...");
+  second();
+}
+
+function second() {
+  console.log("second...");
+  third();
+}
+
+function third() {
+  console.log("third...");
+}
+
+first();
+
+<img src="img/3.png" alt="">
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
