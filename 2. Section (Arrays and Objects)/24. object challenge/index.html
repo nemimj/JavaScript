@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Object Challenge</title>
+  </head>
+  <body>
+    <h1>
+      Object Challenge
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  
+  const library = [
+  {
+    title: "The SpiTech",
+    author: "nemi",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: "The WindShield",
+    author: "bhara",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+];
+
+library[0].status.read = true;
+library[1].status.read = true;
+
+const { title: firstBook } = library[0];
+console.log(firstBook);
+
+const json = JSON.stringify(library);
+console.log(json);
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
