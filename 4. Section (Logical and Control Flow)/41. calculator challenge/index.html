@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Calculator Challenge</title>
+  </head>
+  <body>
+    <h1>
+      Calculator Challenge
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  const calculate = (num1, num2, opeartor) => {
+    if (opeartor === "+")
+      console.log(`Addition of ${num1} and ${num2} is ${num1 + num2}`);
+    else if (opeartor === "-")
+      console.log(`subtraction of ${num1} and ${num2} is ${num1 - num2}`);
+    else if (opeartor === "*")
+      console.log(`MUtliplication of ${num1} and ${num2} is ${num1 * num2}`);
+    else if (opeartor === "/")
+      console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+    else console.log("Opeartor is not valid");
+  };
+  
+  calculate(1, 10, "+");
+  calculate(1, 10, "-");
+  calculate(1, 10, "*");
+  calculate(1, 10, "/");
+  calculate(1, 10, "&");
+  
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>

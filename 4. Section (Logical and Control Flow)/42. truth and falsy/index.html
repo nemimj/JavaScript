@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Truthy and falsy</title>
+  </head>
+  <body>
+    <h1>
+      Truthy and falsy
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">// Falsy Values:</p>
+  // - false
+  // - 0
+  // - "" or ' (Empty string)
+  // — null
+  // undefined
+  // - NaN
+  
+  <p class="note">// Truthy Values:</p>
+  // — Everything else that is not falsy
+  // true
+  // - 0' (0 in a string)
+  // - ' '(space in a string)
+  // - false' (false in a string)
+  // — [] (empty array)
+  // — {} (empty object)
+  // — function ( ) { } (empty function)
+  
+  const x = "false";
+  if (x) {
+    console.log("This is truthy");
+  } else {
+    console.log("This is falsy");
+  }
+  console.log(Boolean(x));
+  
+  <p class="note">// Truthy and falsy cavets</p>
+  const children = 3;
+  if (!isNaN(children)) {
+    console.log(`You have ${children} children`);
+  } else {
+    console.log("Please enter number Of children");
+  }
+  
+  <p class="note">// Checking for empty arrays</p>
+  const posts = [];
+  if (posts.length > 0) {
+    console.log("List Post");
+  } else {
+    console.log("No post found");
+  }
+  
+  <p class="note">// checking for empty object</p>
+  const user = {
+    name: 'Brad' ,
+  }
+    if (Objectkeys(userlength > 0) {
+    console.log( 'List User' );
+    }
+    else {
+    console. tog( 'No User' ) ;
+    }
+    
+    <p class="note">// Loose Equality</p>
+    console.log(false ==  0)
+    console.log (null == undefined)
+    console.log ('' == 0)
+  
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
