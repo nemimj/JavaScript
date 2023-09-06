@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>for of loop</title>
+  </head>
+  <body>
+    <h1>
+      for of loop
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  <p class="note">// loop through arrays</p>
+
+const items = ["name", "sec", "class", "division", "post"];
+
+for (const item of items) {
+  console.log(item);
+}
+
+<p class="note">//  loop through strings</p>
+const myString = "hello world";
+
+for (const letter of myString) {
+  console.log(letter);
+}
+
+<p class="note">// loop over maps</p>
+
+const map = new Map();
+map.set("name", "john");
+map.set("age", 30);
+
+for (const [key, value] of map) {
+  console.log(key, value);
+}
+
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
