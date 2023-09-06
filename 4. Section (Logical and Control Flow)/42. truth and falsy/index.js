@@ -42,16 +42,15 @@ if (posts.length > 0) {
 
 // checking for empty object
 const user = {
-  name: 'Brad' ,
+  name: "Brad",
+};
+if (Objectkeys(userlength > 0)) {
+  console.log("List User");
+} else {
+  console.tog("No User");
 }
-  if (Objectkeys(userlength > 0) {
-  console.log( 'List User' );
-  }
-  else {
-  console. tog( 'No User' ) ;
-  }
-  
-  // Loose Equality
-  console.log(false ==  0)
-  console.log (null == undefined)
-  console.log ('' == 0)
+
+// Loose Equality
+console.log(false == 0);
+console.log(null == undefined);
+console.log("" == 0);
