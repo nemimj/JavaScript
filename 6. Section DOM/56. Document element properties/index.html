@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>DOM element properties</title>
+  </head>
+  <body>
+    <h1>
+      DOM element properties
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  let output;
+
+  output = document.all; // this is deprecated
+  
+  output = document.documentElement;
+  
+  output = document.head;
+  output = document.body;
+  
+  output = document.head.children;
+  output = document.body.children;
+  
+  output = document.doctype;
+  output = document.URL;
+  output = document.domain;
+  output = document.characterSet;
+  output = document.contentType;
+  
+  output = document.forms;
+  output = document.forms[0].action;
+  output = document.forms[0].method;
+  output = document.forms[0].id;
+  
+  output = document.links;
+  output = document.links[0];
+  output = document.links[0].href;
+  output = document.links[0].href = "https://facebook.com";
+  output = document.links[0].id = "google-link";
+  output = document.links[0].className = "google-class";
+  output = document.links[0].classList;
+  console.log(output);
+  
+  //* we can't iterate over HTML Collection
+  const forms = Array.from(document.forms);
+  forms.forEach((ele) => console.log(ele));
+  
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
