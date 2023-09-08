@@ -4,70 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
-    <title>Array map</title>
+    <title>Array reduce</title>
   </head>
   <body>
     <h1>
-      Array map
+      Array reduce
       <button class="btn">Open console to see the result</button>
     </h1>
     <pre>
 <code>
-  const numbers = [1, 2, 3, 4, 5, 6, 7];
+ 
+  const items = [
+  { name: "laptop", price: 100 },
+  { name: "phone", price: 254 },
+  { name: "washing machine", price: 500 },
+];
 
-  const multipleOfTwo = numbers.map((ele) => ele * 2);
-  console.log(multipleOfTwo);
-  
-  const companies = [
-    { name: "Company One", category: "Finance", start: 1981, end: 2004 },
-    { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
-    { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
-    { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
-    { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
-    { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
-    { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
-    { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
-    { name: "Company Nine", category: "Retail", start: 1981, end: 1989 },
-  ];
-  
-  <p class="note">// companies with their names</p>
-  const companyName = companies.map((ele) => ele.name);
-  console.log(companyName);
-  
-  // companies with thier names and category
-  const companyNameAndCategory = companies.map((ele) => ({
-    name: ele.name,
-    category: ele.category,
-  }));
-  console.log(companyNameAndCategory);
-  
-  <p class="note">// companies with their names and length of the company year</p>
-  const companyAndYears = companies.map((ele) => ({
-    name: ele.name,
-    yearsLength: ele.end - ele.start,
-  }));
-  console.log(companyAndYears);
-  
-  <p class="note">// chaining and mapping</p>
-  const squareAndRoot = numbers
-    .map((ele) => Math.sqrt(ele))
-    .map((sqrt) => sqrt * 2);
-  console.log(squareAndRoot);
-  
-  <p class="note">// longer version</p>
-  
-  const squareAndRoot = numbers.map(function (ele)=>{
-      return Math.sqrt(ele)
-  }).map(function(num)=>{
-    return num*2
-  })
-  
-  <p class="note">// chaining different methods</p>
-  const evenDobuled = numbers
-    .filter((ele) => ele % 2 == 0)
-    .map((even) => even * 2);
-  console.log(evenDobuled);
-  
+<p class="note">// till the iteration is over all the return is send to total varaible after iteration is over it is send to totalPrice;</p>
+const totalPrice = items.reduce((total, item) => {
+  return total + item.price;
+}, 0);
+
+console.log(totalPrice);
+
+const people = [
+  { name: "kyle", age: 25 },
+  { name: "John", age: 35 },
+  { name: "Sally", age: 45 },
+  { name: "Jill", age: 25 },
+];
+
+const groupedPeople = people.reduce((total, people) => {
+  const age = people.age;
+  if (total[age] == null) total[age] = [];
+  total[age].push(people);
+  return total;
+}, {});
+
+console.log(groupedPeople);
+
+
+
 </code>
     </pre>
     <script src="index.js"></script>
