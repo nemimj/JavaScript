@@ -5,6 +5,8 @@ const parent = document.querySelector(".parent");
 
 // chlidNodes consists of all the nodes that are inside parent , comments and whitespaces are also nodes
 output = parent.childNodes;
+console.log(output);
+
 output = parent.childNodes[0].textContent;
 output = parent.childNodes[0].nodeName;
 output = parent.childNodes[3].textContent;
