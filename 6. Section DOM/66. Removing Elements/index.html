@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Removing Elements</title>
+  </head>
+  <body>
+    <h1>
+      Removing Elements
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+<code>
+  function removeElements() {
+    const removeBtn = document.querySelector(".btn");
+    removeBtn.remove();
+  }
+  
+  function removeFirstItem() {
+    const ul = document.querySelector("ul");
+    const li = document.querySelector("li:first-child");
+  
+    ul.removeChild(li);
+  }
+  
+</code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
