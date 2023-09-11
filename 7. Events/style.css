@@ -22,6 +22,7 @@ body {
   h1 {
     display: flex;
     gap: 2rem;
+    cursor: pointer;
   }
   .btn {
     font-size: 1.2rem;
