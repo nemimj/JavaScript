@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        background-color: #cecece;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 320px;
+        margin: auto;
+        font-size: 1.5rem;
+      }
+
+      .container {
+        display: flex;
+        text-align: center;
+      }
+
+      .key {
+        border: 1px solid #999;
+        background-color: #eee;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        display: inline-flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+        flex-direction: column;
+        margin: 10px;
+        min-width: 150px;
+        position: relative;
+      }
+
+      .key small {
+        position: absolute;
+        left: 0;
+        top: -30px;
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+    <title>Keyboard Keypress Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="key">
+        ${e.key}
+        <small>e.key</small>
+      </div>
+      <div class="key">
+        ${e.key}
+        <small>e.keyCode</small>
+      </div>
+      <div class="key">
+        ${e.key}
+        <small>e.code</small>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
