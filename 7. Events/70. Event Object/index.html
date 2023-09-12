@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Event object</title>
+  </head>
+  <body>
+    <h1>
+      Event object
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+    <code>
+      const h1 = document.querySelector("h1");
+const btn = document.querySelector(".btn");
+h1.addEventListener("click", (e) => {
+  console.log(e.target); // the element we clicked
+  console.log(e.currentTarget); // the element we attached to
+});
+
+btn.addEventListener("drag", (e) => {
+  btn.innerText = `X:${e.clientX} Y:${e.clientY}`;
+});
+
+<p class="note">// e.preventDefault() method prevents the default behavior</p>
+document.querySelector("a").addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("Link was clicked");
+});
+
+/*
+  <p class="note">- `target` - The element that triggered the event</p>
+  <p class="note">- `currentTarget` - The element that the event listener is attached to (These are the same in this case</p>
+  <p class="note">- `type` - The type of event that was triggered</p>
+  <p class="note">- `timeStamp` - The time that the event was triggered</p>
+  <p class="note">- `clientX` - The x position of the mouse click relative to the window</p>
+  <p class="note">- `clientY` - The y position of the mouse click relative to the window</p>
+  <p class="note">- `offsetX` - The x position of the mouse click relative to the element</p>
+  <p class="note">- `offsetY` - The y position of the mouse click relative to the element</p>
+  <p class="note">- `pageX` - The x position of the mouse click relative to the page</p>
+  <p class="note">- `pageY` - The y position of the mouse click relative to the page</p>
+  <p class="note">- `screenX` - The x position of the mouse click relative to the screen</p>
+  <p class="note">- `screenY` - The y position of the mouse click relative to the screen</p>
+  */
+
+    </code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
