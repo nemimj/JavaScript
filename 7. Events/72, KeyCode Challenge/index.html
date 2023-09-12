@@ -21,6 +21,12 @@
         font-size: 1.5rem;
       }
 
+      h1 {
+        padding: 1rem;
+        background-color: #333;
+        color: white;
+      }
+
       .container {
         display: flex;
         text-align: center;
@@ -37,7 +43,6 @@
         padding: 20px;
         flex-direction: column;
         margin: 10px;
-        min-width: 150px;
         position: relative;
       }
 
@@ -53,18 +58,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="key">
-        ${e.key}
-        <small>e.key</small>
-      </div>
-      <div class="key">
-        ${e.key}
-        <small>e.keyCode</small>
-      </div>
-      <div class="key">
-        ${e.key}
-        <small>e.code</small>
-      </div>
+      <h1>Press Any key to Show the output</h1>
     </div>
     <script src="index.js"></script>
   </body>
