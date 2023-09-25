@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>setTimeOut and SetInterval</title>
+  </head>
+  <body>
+    <h1>
+      setTimeOut and SetInterval
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <button class="btn-time btn">Stop the timer</button>
+    <pre>
+      <code>
+        function changeBg() {
+          document.body.style = "background-color: red";
+        }
+        
+        a = setTimeout(changeBg, 3000);
+        console.log(a);
+        
+        document.querySelector(".btn-time").addEventListener("click", () => {
+          console.log(a);
+          clearTimeout(a);
+          console.log("time cleared");
+        });
+        
+      </code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
