@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>HTTP Request</title>
+  </head>
+  <body>
+    <h1>
+      HTTP Request
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <p class="note">
+      <strong>HyperText Transfer Protocol</strong> <br />
+      is the protocol for sending and receiving data on the web. HTTP is a
+      client/server protocol. Requests are initiated by the client (you) and the
+      server will respond with a "response The response could be HTML, CSS, JS
+      files, images and other resources as well as data formatted as JSON or XML
+    </p>
+
+    <p class="note">
+      <strong>Making Requests From JavaScript</strong> <br />
+      Many times, you will want to fetch some data and update a specific part of
+      the DOM/webpage. We can do this using JavaScript AJAX / XMLHttpRequest
+      object was the original way of doing this, however, these days we mostly
+      use the fetch API that is available to us in the browser environment
+    </p>
+    <table>
+      <tr>
+        <th>HTTP Methods</th>
+        <th>HTTP Request Info</th>
+      </tr>
+      <tr>
+        <td>GET</td>
+        <td>Request Fetch/retrieve data from the server</td>
+      </tr>
+      <tr>
+        <td>POST</td>
+        <td>Request Send data to the server</td>
+      </tr>
+      <tr>
+        <td>PUT & PATCH</td>
+        <td>Request Update data on a server</td>
+      </tr>
+      <tr>
+        <td>DELETE</td>
+        <td>Request Delete data from a server</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>HTTP Code</th>
+        <th>HTTP Info</th>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>Range Continue</td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td>Range Success</td>
+      </tr>
+      <tr>
+        <td>300</td>
+        <td>Range Redirects</td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>Range Client Error</td>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td>Range Server Error</td>
+      </tr>
+    </table>
+    <p class="note">
+      200 Success <br />201 Created <br />204 No Content <br />301 Resource
+      Moved <br />400 Bad Request <br />401 Unauthorized <br />403 Forbidden
+      <br />404 Not Found <br />500 Error on server
+    </p>
+    <script src="index.js"></script>
+  </body>
+</html>
