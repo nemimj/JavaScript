@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Prmoise All</title>
+  </head>
+  <body>
+    <h1>
+      Prmoise All
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+        const firstPromise = new Promise((resolve, reject) => {
+          resolve("First");
+        });
+        const secondPromise = new Promise((resolve, reject) => {
+          resolve("second");
+        });
+        const thirdPromise = new Promise((resolve, reject) => {
+          resolve("third");
+        });
+        const fourthPromise = new Promise((resolve, reject) => {
+          resolve("fourth");
+        });
+        
+        <p class="note">
+          Promise.all([firstPromise, secondPromise, thirdPromise, fourthPromise])
+            .then((data) => {
+              console.log(data);
+            })
+        </p>
+          .catch(() => {
+            console.log("Something Wrong is happened");
+          });
+        
+      </code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
