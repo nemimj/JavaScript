@@ -12,7 +12,68 @@
       Promises
       <button class="btn">Open console to see the result</button>
     </h1>
+    <p class="note">
+      Prmoise -> promise is an object represeting the eventual completion of
+      Asynchrounous Operation
+    </p>
 
+    <ol>
+      <h3>Promises has 3 states</h3>
+      <li>Pending</li>
+      <li>Fullfilled</li>
+      <li>Rejected</li>
+    </ol>
+
+    <pre>
+      <p class="note">// create a promise</p>
+const promise = new Promise((resolve, reject) => {
+  // Do some async work
+  setTimeout(() => {
+    console.log("Async Completed");
+    resolve("Data From Resolve");
+  }, 1000);
+});
+
+promise.then((dataFromResolve) => {
+  console.log(dataFromResolve);
+  console.log("Promise Consumed");
+});
+
+console.log("Hello world");
+
+<p class="note">// promise chaining</p>
+
+new Promise((resolve, reject) => {
+  // Do some async work
+  setTimeout(() => {
+    console.log("Async Completed");
+    resolve({ name: "nemi", age: 21 });
+  }, 1000);
+}).then((obj) => {
+  console.log(obj);
+});
+
+<p class="note">// how to handle reject</p>
+
+const getUser = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = true;
+    if (!error) {
+      resolve("Name : Nemi");
+    } else {
+      reject("Reject is called");
+    }
+  }, 1000);
+});
+
+getUser
+  .then((data) => console.log(data))
+  .catch((data) => console.log(data))
+  .finally(() => {
+    console.log("I will run no matter what ");
+  });
+
+    </pre>
     <script src="index.js"></script>
   </body>
 </html>
