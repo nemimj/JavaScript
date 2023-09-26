@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.7;
+  }
+
+  body::after{
+    font-size: 0.8rem;
+    color: white;
+    content: 'made with 💖 nemi';
+    position: absolute;
+    left: 0;
+    text-align: center;
+    background-color: #333;
+    padding: 0.5rem;
+    margin: auto;
+  }
+
+  h1 {
+    display: flex;
+    gap: 2rem;
+    cursor: pointer;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    background-color: lightcoral;
+    border: 0;
+  }
+
+  .note {
+    padding: 1rem;
+    background-color: lightslategrey;
+    color: #fff;
+  }
