@@ -6,15 +6,19 @@ const getTodos = () => {
     .then((data) => displayTodo(data));
 };
 
-function displayTodo(data) {
-  data.forEach((element) => {
-    let li = document.createElement("li");
-    let todoList = document.querySelector(".todo-list");
-    li.textContent = element.title;
-    if (element.completed) li.classList.add("done");
+const displayTodo = (data) => {
+  data.forEach((element) => addTodoDom(element));
+};
 
-    todoList.appendChild(li);
-  });
-}
+const addTodoDom = (element) => {
+  let li = document.createElement("li");
+  let todoList = document.querySelector(".todo-list");
+  let textNode = document.createTextNode(element.title);
+  li.appendChild(textNode);
+  li.setAttribute("data-id", element.id); //* to add custome attribute we should use data -
+  if (element.completed) li.classList.add("done");
+
+  todoList.appendChild(li);
+};
 
 getTodos();
