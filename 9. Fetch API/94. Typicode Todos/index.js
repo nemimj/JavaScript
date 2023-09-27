@@ -1,4 +1,4 @@
-apiUrl = "https://jsonplaceholder.typicode.com/todos";
+const apiUrl = "https://jsonplaceholder.typicode.com/todos";
 
 const getTodos = () => {
   fetch(apiUrl + "?_limit=5")
@@ -21,4 +21,26 @@ const addTodoDom = (element) => {
   todoList.appendChild(li);
 };
 
-getTodos();
+const createTodo = (e) => {
+  e.preventDefault();
+  //   console.log(e.target.firstElementChild.value); // *  console.log(e.target.elements[0].value);
+
+  let newTodo = { title: e.target.firstElementChild.value, completed: false };
+
+  fetch(apiUrl, {
+    method: "POST",
+    body: JSON.stringify(newTodo),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => addTodoDom(data));
+};
+
+const init = () => {
+  document.addEventListener("DOMContentLoaded", getTodos);
+  document.querySelector(".todo-form").addEventListener("submit", createTodo);
+};
+
+init();
