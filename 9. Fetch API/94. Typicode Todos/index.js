@@ -1,7 +1,7 @@
 const apiUrl = "https://jsonplaceholder.typicode.com/todos";
 
 const getTodos = () => {
-  fetch(apiUrl + "?_limit=5")
+  fetch(apiUrl + "?_limit=10")
     .then((res) => res.json())
     .then((data) => displayTodo(data));
 };
@@ -12,6 +12,7 @@ const displayTodo = (data) => {
 
 const addTodoDom = (element) => {
   let li = document.createElement("li");
+  li.classList.add("todo-item");
   let todoList = document.querySelector(".todo-list");
   let textNode = document.createTextNode(element.title);
   li.appendChild(textNode);
@@ -40,7 +41,9 @@ const createTodo = (e) => {
 };
 
 const toggleCompleted = (e) => {
-  let completed = e.target.classList.toggle("done");
+  if (e.target.classList.contains("todo-item")) {
+    let completed = e.target.classList.toggle("done");
+  }
 
   updateTodo(e.target.dataset.id, completed);
 };
@@ -58,12 +61,14 @@ const updateTodo = (id, completed) => {
 };
 
 const deleteTodo = (e) => {
-  let id = e.target.dataset.id;
-  fetch(`${apiUrl}/${id}`, {
-    method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then(() => e.target.remove());
+  if (e.target.classList.contains("todo-item")) {
+    let id = e.target.dataset.id;
+    fetch(`${apiUrl}/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then(() => e.target.remove());
+  }
 };
 const init = () => {
   document.addEventListener("DOMContentLoaded", getTodos);
