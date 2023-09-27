@@ -14,33 +14,55 @@
     </h1>
     <pre>
       <code>
-        <p class="note">// With Try Catch Block</p>
-
-        const getUsers = async () => {
-          try {
-            const reponse = await fetch("http://httpstat.us/404");
-        
-            if (!response.ok) throw new Error("Request Failed");
-        
-            const data = await reponse.text();
-            console.log(data);
-          } catch (error) {
-            console.log("Error : ", error);
-          }
-        };
-        
-        <p class="note">// Without Try Catch Block Outside the function</p>
-        
-        const getPosts = async () => {
-          const reponse = await fetch("http://httpstat.us/404");
-        
-          if (!response.ok) throw new Error("Request Failed");
-        
-          const data = await reponse.text();
+        getData("./movies.json", (data) => {
           console.log(data);
-        };
+          getData("./directors.json", (data) => {
+            console.log(data);
+            getData("./heros.json", (data) => {
+              console.log(data);
+            });
+          });
+        });
         
-        getPosts().catch((err) => console.log(err));
+        <p class="note">// using xmlhttp</p>
+        async function getUsers() {
+          const movies = await getUsers("./movies.json");
+          const direcotrs = await getUsers("./directors.json");
+          const heros = await getUsers("./heros.json");
+          console.log(movies, direcotrs, heros);
+          console.log("This will not execute till the await statments are over");
+        }
+        
+        getUsers();
+        
+        <p class="note">// Using Fetch</p>
+        async function getUsersUsingFetch() {
+          const moviesRes = await fetch("./movies.json");
+          const movies = await moviesRes.json();
+        
+          const direcotrsRes = await fetch("./directors.json");
+          const directors = await directorsRes.json();
+        
+          const herosRes = await fetch("./heros.json");
+          const heros = await heros.json();
+        
+          console.log(movies, direcotrs, heros);
+          console.log("This will not execute till the await statments are over");
+        }
+        
+        getUsersUsingFetch();
+        
+        <p class="note">// using promise all</p>
+        
+        async function fetchUsingPromiseAll() {
+          const [movies, directors, heros] = await Promise.all([
+            fetch("./movies.json").then((res) => res.json),
+            fetch("./directors.json").then((res) => res.json),
+            fetch("./heros").then((res) => res.json),
+          ]);
+        }
+        
+        fetchUsingPromiseAll();
         
       </code>
     </pre>
