@@ -54,15 +54,24 @@ const updateTodo = (id, completed) => {
     },
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data.completed));
 };
 
+const deleteTodo = (e) => {
+  let id = e.target.dataset.id;
+  fetch(`${apiUrl}/${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then(() => e.target.remove());
+};
 const init = () => {
   document.addEventListener("DOMContentLoaded", getTodos);
   document.querySelector(".todo-form").addEventListener("submit", createTodo);
   document
     .querySelector(".todo-list")
     .addEventListener("click", toggleCompleted);
+  document.querySelector(".todo-list").addEventListener("dblclick", deleteTodo);
 };
 
 init();
