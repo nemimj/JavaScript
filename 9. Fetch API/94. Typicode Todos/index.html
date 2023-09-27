@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .input input,
+      .btn-todo {
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+      }
+      .btn-todo {
+        background-color: lightcoral;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      li {
+        padding: 0.5rem;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .done {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+    <title>Typicode Todo</title>
+  </head>
+  <body>
+    <h1>
+      Typicode Todo
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <h2>Typicode Todos</h2>
+    <form class="input">
+      <input type="text" placeholder="Add todo..." />
+      <input type="submit" class="btn-todo" />
+    </form>
+    <ul class="todo-list"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>
