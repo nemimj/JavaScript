@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Fetch Api Error Handling</title>
+  </head>
+  <body>
+    <h1>
+      Fetch Api Error Handling
+      <button class="btn">Open console to see the result</button>
+    </h1>
+    <pre>
+      <code>
+      
+        <p class="note">// catch runs on a network error not on the status we have to manually add it.</p>
+fetch("http://hellonemi123.net")
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => console.log(error));
+
+<p class="note">// checking the status manually</p>
+fetch("http://httpstat.us/404")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Not Found");
+    }
+  })
+  .then(() => {
+    console.log("Success");
+  })
+  .catch((error) => console.log(error));
+
+<p class="note">// Check for specific Code</p>
+fetch("http://httpstat.us/404")
+  .then((res) => {
+    if (res.status === 400) {
+      throw new Error("Not Found");
+    } else if (res.status === 500) {
+      throw new Error("Server Error");
+    } else if (res.status !== 200) {
+      throw new Error("Request Failed");
+    }
+  })
+  .then(() => {
+    console.log("Success");
+  })
+  .catch((error) => console.log(error));
+
+      </code>
+    </pre>
+    <script src="index.js"></script>
+  </body>
+</html>
