@@ -35,12 +35,34 @@ const createTodo = (e) => {
     },
   })
     .then((res) => res.json())
-    .then((data) => addTodoDom(data));
+    .then((data) => addTodoDom(data))
+    .catch((reject) => console.log(reject));
+};
+
+const toggleCompleted = (e) => {
+  let completed = e.target.classList.toggle("done");
+
+  updateTodo(e.target.dataset.id, completed);
+};
+
+const updateTodo = (id, completed) => {
+  fetch(`${apiUrl}/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify({ completed }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 };
 
 const init = () => {
   document.addEventListener("DOMContentLoaded", getTodos);
   document.querySelector(".todo-form").addEventListener("submit", createTodo);
+  document
+    .querySelector(".todo-list")
+    .addEventListener("click", toggleCompleted);
 };
 
 init();
