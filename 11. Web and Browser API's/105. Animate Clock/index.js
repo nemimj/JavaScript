@@ -39,7 +39,33 @@ function clock() {
   ctx.fill(); // taking default color grey
   ctx.restore();
 
+  // Draw hour lines
+  ctx.save();
+  for (let i = 0; i <= 12; i++) {
+    ctx.beginPath();
+    ctx.rotate(Math.PI / 6); // this will start rotating from where it is left (6 gives 12 , 2 gives 4)
+    ctx.moveTo(100, 0);
+    ctx.lineTo(120, 0);
+    ctx.stroke();
+  }
   ctx.restore(); // restore to default state
+
+  // Draw minutes lines
+  ctx.save();
+  ctx.lineWidth = 4;
+  for (let i = 0; i <= 60; i++) {
+    // to remove the 6th minute line on hour clock
+    if (i % 5 !== 0) {
+      ctx.beginPath();
+      ctx.moveTo(117, 0);
+      ctx.lineTo(120, 0);
+      ctx.stroke();
+    }
+    ctx.rotate(Math.PI / 30); // this will start rotating from where it is left (6 gives 12 , 2 gives 4)
+  }
+  ctx.restore();
+
+  ctx.restore();
 }
 
 requestAnimationFrame(clock);
