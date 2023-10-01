@@ -13,9 +13,10 @@ ctx.arc(300, 300, 100, 0, Math.PI * 2);
 ctx.fill();
 
 // draw lines
+
 ctx.beginPath();
-ctx.strokeStyle = "orange";
 ctx.lineWidth = 5;
+ctx.strokeStyle = "orange";
 ctx.moveTo(10, 10);
 ctx.lineTo(300, 300);
 ctx.stroke();
