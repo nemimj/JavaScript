@@ -11,6 +11,12 @@ ctx.clearRect(75, 75, 50, 50);
 
 */
 
+let face = document.getElementById("Face-color");
+let border = document.getElementById("Border-color");
+let numberLines = document.getElementById("Number-lines-color");
+let largeLines = document.getElementById("Large-hand-color");
+let secondLines = document.getElementById("Second-hand-color");
+
 function clock() {
   const now = new Date();
   const canvas = document.getElementById("my-canvas");
@@ -25,7 +31,7 @@ function clock() {
 
   // Set Default Styles
   ctx.strokeStyle = "#000000";
-  ctx.fillStyle = "#f4f4f4";
+  ctx.fillStyle = face.value;
   ctx.lineWidth = 5;
   ctx.lineCap = "round";
 
@@ -33,7 +39,7 @@ function clock() {
   ctx.save();
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = "#800000";
+  ctx.strokeStyle = border.value;
   ctx.arc(0, 0, 142, 0, Math.PI * 2);
   ctx.stroke();
   ctx.fill(); // taking default color grey
@@ -69,14 +75,12 @@ function clock() {
   const mins = now.getMinutes();
   const sec = now.getSeconds();
 
-  console.log(`${hr}:${mins}:${sec}`);
-
   // Draw hour hand
   ctx.save();
   ctx.rotate(
     (Math.PI / 6) * hr + (Math.PI / 360) * mins + (Math.PI / 21600) * sec
   );
-  ctx.strokeStyle = "#800000";
+  ctx.strokeStyle = largeLines.value;
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -98,8 +102,8 @@ function clock() {
   // Draw second hand
   ctx.save();
   ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = "#ff7f50";
-  ctx.fillStyle = "#ff7f50";
+  ctx.strokeStyle = secondLines.value;
+  ctx.fillStyle = secondLines.value;
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-28, 0);

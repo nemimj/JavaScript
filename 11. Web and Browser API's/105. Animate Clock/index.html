@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       canvas {
-        border: 1px solid black;
-        width: 500px;
+        max-width: 500px;
         margin: auto;
+      }
+      .btn-save {
+        margin-top: 0.5rem;
+        background-color: black;
+        color: white;
+        padding: 0.5rem;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: capitalize;
       }
     </style>
     <title>Animate Clock</title>
@@ -19,6 +28,31 @@
       <button class="btn">Open console to see the result</button>
     </h1>
     <canvas id="my-canvas" width="500" height="500"></canvas>
+
+    <form>
+      <h3>Clock Style</h3>
+      <div class="form-input">
+        <label for="Face-color">Face color</label>
+        <input type="color" id="Face-color" value="#f4f4f4" />
+      </div>
+      <div class="form-input">
+        <label for="Border-color">Border color</label>
+        <input type="color" id="Border-color" value="#800000" />
+      </div>
+      <div class="form-input">
+        <label for="Number-lines-color">Number Lines color</label>
+        <input type="color" id="Number-lines-color" value="#000000" />
+      </div>
+      <div class="form-input">
+        <label for="Large-hand-color">Large Hands color</label>
+        <input type="color" id="Large-hand-color" value="#800000" />
+      </div>
+      <div class="form-input">
+        <label for="Second-hand-color">Second Hand color</label>
+        <input type="color" id="Second-hand-color" value="#ff7f50" />
+      </div>
+    </form>
+    <button class="btn-save">Save as image</button>
     <script src="index.js"></script>
   </body>
 </html>
