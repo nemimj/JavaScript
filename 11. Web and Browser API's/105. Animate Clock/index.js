@@ -105,11 +105,15 @@ function clock() {
   ctx.moveTo(-28, 0);
   ctx.lineTo(110, 0);
   ctx.stroke();
-  ctx.restore();
 
   // small circle near the seconds
-
+  ctx.beginPath();
+  ctx.arc(0, 0, 10, 0, Math.PI * 2, true);
+  ctx.fill();
   ctx.restore();
+  ctx.restore();
+
+  requestAnimationFrame(clock);
 }
 
 requestAnimationFrame(clock);
