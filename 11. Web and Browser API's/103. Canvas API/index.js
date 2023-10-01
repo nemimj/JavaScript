@@ -29,3 +29,9 @@ ctx.strokeStyle = "black";
 // text: x : y : width
 ctx.fillText("hello", 300, 100, 300);
 ctx.strokeText("hello", 300, 150, 300);
+
+// draw image
+const image = document.querySelector("img");
+image.style.display = "none";
+
+image.addEventListener("load", () => ctx.drawImage(image, 250, 250, 100, 100));
