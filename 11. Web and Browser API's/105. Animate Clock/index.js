@@ -88,12 +88,26 @@ function clock() {
   ctx.save();
   ctx.rotate((Math.PI / 30) * mins + (Math.PI / 1800) * sec);
   ctx.strokeStyle = "#800000";
-  ctx.lineWidth = 14;
+  ctx.lineWidth = 8;
   ctx.beginPath();
-  ctx.moveTo(-20, 0);
-  ctx.lineTo(80, 0);
+  ctx.moveTo(-28, 0);
+  ctx.lineTo(110, 0);
   ctx.stroke();
   ctx.restore();
+
+  // Draw second hand
+  ctx.save();
+  ctx.rotate((sec * Math.PI) / 30);
+  ctx.strokeStyle = "#ff7f50";
+  ctx.fillStyle = "#ff7f50";
+  ctx.lineWidth = 6;
+  ctx.beginPath();
+  ctx.moveTo(-28, 0);
+  ctx.lineTo(110, 0);
+  ctx.stroke();
+  ctx.restore();
+
+  // small circle near the seconds
 
   ctx.restore();
 }
