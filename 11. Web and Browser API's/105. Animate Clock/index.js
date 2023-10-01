@@ -65,6 +65,38 @@ function clock() {
   }
   ctx.restore();
 
+  const hr = now.getHours();
+  const mins = now.getMinutes();
+  const sec = now.getSeconds();
+
+  console.log(`${hr}:${mins}:${sec}`);
+
+  // Draw hour hand
+  ctx.save();
+  ctx.rotate(
+    (Math.PI / 6) * hr + (Math.PI / 360) * mins + (Math.PI / 21600) * sec
+  );
+  ctx.strokeStyle = "#800000";
+  ctx.lineWidth = 14;
+  ctx.beginPath();
+  ctx.moveTo(-20, 0);
+  ctx.lineTo(80, 0);
+  ctx.stroke();
+  ctx.restore();
+
+  // Draw hour hand
+  ctx.save();
+  ctx.rotate(
+    (Math.PI / 6) * hr + (Math.PI / 360) * mins + (Math.PI / 21600) * sec
+  );
+  ctx.strokeStyle = "#800000";
+  ctx.lineWidth = 14;
+  ctx.beginPath();
+  ctx.moveTo(-20, 0);
+  ctx.lineTo(80, 0);
+  ctx.stroke();
+  ctx.restore();
+
   ctx.restore();
 }
 
