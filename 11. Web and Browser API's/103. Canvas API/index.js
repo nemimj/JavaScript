@@ -20,3 +20,12 @@ ctx.strokeStyle = "orange";
 ctx.moveTo(10, 10);
 ctx.lineTo(300, 300);
 ctx.stroke();
+
+// draw Text
+ctx.font = "50px Arial";
+ctx.lineWidth = 1;
+ctx.fillStyle = "blue";
+ctx.strokeStyle = "black";
+// text: x : y : width
+ctx.fillText("hello", 300, 100, 300);
+ctx.strokeText("hello", 300, 150, 300);
