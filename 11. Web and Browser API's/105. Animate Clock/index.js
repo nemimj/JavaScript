@@ -23,6 +23,22 @@ function clock() {
   ctx.translate(250, 250); // Put x and y 250 (to middle of the rectangle)
   ctx.rotate(-Math.PI / 2); // rotate the clock to (90 deg)
 
+  // Set Default Styles
+  ctx.strokeStyle = "#000000";
+  ctx.fillStyle = "#f4f4f4";
+  ctx.lineWidth = 5;
+  ctx.lineCap = "round";
+
+  // Draw clock face/border
+  ctx.save();
+  ctx.beginPath();
+  ctx.lineWidth = 14;
+  ctx.strokeStyle = "#800000";
+  ctx.arc(0, 0, 142, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.fill(); // taking default color grey
+  ctx.restore();
+
   ctx.restore(); // restore to default state
 }
 
